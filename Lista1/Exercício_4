@@ -1,0 +1,14 @@
+# 4. Faça um programa que imprima a tabuada do 9 (de 9*1 a 9*10) usando loops.
+
+tabuada = 0
+print (tabuada, 'contando')
+
+while tabuada <= 90:
+      tabuada = tabuada + 9
+      if tabuada == 1:
+        continue
+      print(tabuada, 'Contando')
+      if tabuada == 90:
+        break
+
+print("Fim da repetição do bloco while")
