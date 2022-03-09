@@ -1,0 +1,68 @@
+# 3. Vamos fazer um programa para verificar quem é o assassino de um crime. Para descobrir o assassino, a polícia faz um pequeno questionário 
+# com 5 perguntas onde a resposta só pode ser sim ou não:
+  # a. Mora perto da vítima?
+  # b. Já trabalhou com a vítima?
+  # c. Telefonou para a vítima?
+  # d. Esteve no local do crime?
+  # e. Devia para a vítima?
+
+# Cada resposta sim dá um ponto para o suspeito. A polícia considera que os suspeitos com 5 pontos são os assassinos, com 4 a 3 pontos são 
+# cúmplices e 2 pontos são apenas suspeitos, necessitando outras investigações. Valores iguais ou abaixo de 1 são liberados.
+
+# a.
+
+morar_perto = input('Você mora perto da vítima? Insira "Sim" ou "Não" ')
+
+if morar_perto == 'Sim':
+  morar_perto = 1
+else:
+  morar_perto =  0
+  
+# b.
+
+trab_vitima = input('Você já trabalhou com a vítima? Insira "Sim" ou "Não" ')
+
+if trab_vitima == 'Sim':
+  trab_vitima = 1
+else:
+  trab_vitima = 0
+ 
+# c.
+
+tel_vitima = input('Você telefonou para a vítima? Insira "Sim" ou "Não" ')
+
+if tel_vitima == 'Sim':
+  tel_vitima = 1
+else:
+  tel_vitima = 0
+    
+# d.
+
+local_crime = input('Você esteve no local do crime? Insira "Sim" ou "Não" ')
+
+if local_crime == 'Sim':
+  local_crime = 1
+else:
+  local_crime = 0
+    
+# e.
+
+devia_vitima = input('Você devia para a vítima? Insira "Sim" ou "Não" ')
+
+if devia_vitima == 'Sim':
+  devia_vitima = 1
+else:
+  devia_vitima = 0
+    
+
+soma_pontos = morar_perto + trab_vitima + tel_vitima + local_crime + devia_vitima
+print(soma_pontos)
+if soma_pontos == 5:
+  print('Você está preso, é o assassino.')
+elif soma_pontos == 4 or soma_pontos == 3:
+  print('Você está sendo acusado de cúmplice.') 
+elif soma_pontos == 2:
+  print('Você é um suspeito.')
+elif soma_pontos == 1 or soma_pontos < 1 :
+  print('Você está liberado.') 
+      
